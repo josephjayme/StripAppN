@@ -69,7 +69,7 @@ $$
      else
        select into loc_id2 stripperid from stripper where stripperid = par_stripperid;
        if loc_id2 isnull then
-            insert into stripper (stripperid, status, switchvalue, owner, lat, lng) values (par_stripperid, False, False, par_owner, 0, 0);
+            insert into stripper (stripperid, status, switchvalue, owner, lat, lng) values (par_stripperid, random()>0.5, False, par_owner, 0, 0);
             loc_res = 'OK';
        else
             loc_res = 'HAS OWNER';
