@@ -146,7 +146,7 @@ $$
  language 'sql';
 --select * from getregistered();
 
-create or replace function getfname(in par_user text, out text) returns record as
+create or replace function getfname(in par_user text, out text) returns text as
 $$
    select fname from userpass where username = par_user;
 $$
