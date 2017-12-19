@@ -1,0 +1,295 @@
+/*Cards*/
+.card-img-top {
+width: 100%;
+display: block;
+}
+
+.card-title{
+  text-align: center;
+}
+
+.deletestripper{
+  
+}
+.card {
+  width: 20rem;
+  display: inline-block;
+  margin: 10px 10px 10px 10px;
+}
+.card:hover {
+box-shadow: 0 16px 30px 0 rgba(0,0,0,0.2);
+}
+
+img {
+border-radius: 5px 5px 0 0;
+}
+
+.cardblock {
+padding: 2px 16px;
+}
+
+.schedule-btn-text{
+  font-size: 16px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+.card-text{
+  margin-left: 10px;
+  display:inline-block;
+  margin-bottom: 0;
+}
+
+#stripid{
+
+}
+
+#stripstat{
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+}
+
+#close:hover {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+}
+
+/*Switch*/
+.switcher {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: 3px;
+  left: 15px;
+}
+
+.switcher input {display:none;}
+
+.slide {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slide:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slide {
+  background-color: #3de22b;
+}
+
+input:focus + .slide {
+  box-shadow: 0 0 1px #3de22b;
+}
+
+input:checked + .slide:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slide.round {
+  border-radius: 34px;
+}
+
+.slide.round:before {
+  border-radius: 50%;
+}
+
+
+/*Floating Button*/
+.floatbtn{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:80px;
+  right:40px;
+  background-color:#0C9;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-floatbtn{
+  margin-top:22px;
+}
+
+
+/* BUBBLE */
+.jfk-bubble {
+  box-shadow: 0 1px 3px rgba(black,.2);
+  background-color: #fff;
+  border: 1px solid;
+  position: absolute;
+  z-index: 1201 !important;
+  border-color: #bbb #bbb #a8a8a8;
+  padding: 16px;
+  width: 255px;
+  line-height: 17px;
+  visibility: hidden; 
+  opacity: 0;
+  left: 16px; 
+  top: 48px; 
+  @include transition(all 0.218s);
+  &.active {
+    visibility: visible; 
+    opacity: 1;
+  }
+}
+
+/* bubble arrow */
+.jfk-bubble-arrow {
+  position: absolute;
+  top: 20px;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+  }
+  &:before {
+    border: 9px solid;
+    border-color: transparent #bbb;
+    top: -9px;
+  }
+  &:after {
+    border: 8px solid;
+    border-color: transparent #fff;
+    top: -8px;
+  }
+}
+
+.jfk-bubble-arrowright {
+  right: 0;
+  &:before, &:after {
+    border-right-width: 0;
+  }
+} 
+
+/*//////////////////////Register Form/////////////////////*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 44%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: list-item;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
